@@ -137,9 +137,9 @@ class SudokuGenerator:
     '''
     def fill_diagonal(self):
         # Fills the three boxes along the main diagonal of the board
-        fill_box(self, 0,0)
-        fill_box(self, 3,3)
-        fill_box(self, 6,6)
+        fill_box(self, 0, 0)
+        fill_box(self, 3, 3)
+        fill_box(self, 6, 6)
 
     '''
     DO NOT CHANGE
