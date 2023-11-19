@@ -87,7 +87,7 @@ class SudokuGenerator:
         # Determines if num is contained in the 3x3 box from (row_start, col_start) to (row_start+2, col_start+2)
         for i in range(row_start, row_start+2):
             for j in range(col_start, col_start+2):
-                if num == self[i][j]:
+                if num == self.board[i][j]:
                     return False
         return True
     
@@ -110,7 +110,7 @@ class SudokuGenerator:
                     if 3 > col - j >= 0:
                         row_start = i
                         col_start = j
-        if valid_in_row(self, row, num) and valid_in_col(self, col, num) and valid_in_box(self, row_start, col_start, num):
+        if self.valid_in_row(row, num) and self.valid_in_col(col, num) and self.valid_in_box(row_start, col_start, num):
             return True
 	else:
 		return False
